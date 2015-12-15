@@ -3,6 +3,12 @@ var RSVP = require('rsvp');
 module.exports = {
   description: 'Moves the image files into place',
 
+  normalizeEntityName: function() {
+    // this prevents an error when the entityName is
+    // not specified (since that doesn't actually matter
+    // to us
+  },
+  
   // locals: function(options) {
   //   // Return custom template variables here.
   //   return {
